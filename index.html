@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Survey Page</title>
+</head>
+<body>
+  <h1 id="title">Ward's Survey Form</h1>
+  <p id="description">This is a survey form for you and you only.</p>
+
+  <form id="survey-form" action="submit_form.php" method="POST">
+    <fieldset>
+      <label id="name-label" for="name">Enter your full name:</label>
+      <input id="name" type="text" placeholder="Ex: FirstName LastName" required>
+      <br>
+
+      <label id="email-label" for="email">Enter your Email Address:</label>
+      <input id="email" type="email" placeholder="Ex: example@gmail.com" required>
+      <br>
+
+      <label id="number-label" for="number">Enter your age:</label>
+      <input id="number" type="number" min="12" max="90" placeholder="Ex: 18" required>
+      <br>
+    </fieldset>
+
+    <fieldset>
+      <p>Do you love me?</p>
+      <label>
+        <input type="radio" name="love" value="yes" required> Yes
+      </label>
+      <label>
+        <input type="radio" name="love" value="no"> No
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="dropdown">How much do you love me?</label>
+      <select id="dropdown" name="dropdown">
+        <option value="">Select an option</option>
+        <option value="1">INFINITY</option>
+        <option value="2">Infinity * 2</option>
+        <option value="3">Undefined</option>
+        <option value="4">No Solution</option>
+        <option value="5">>Bahobak</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label for="feedback">What would you like to tell me?</label>
+      <textarea id="feedback" name="feedback" rows="3" cols="30" placeholder="Ehi..."></textarea>
+    </fieldset>
+
+    <fieldset>
+      <p>What do you love about me?</p>
+      <label>
+        <input type="checkbox" name="trait" value="hair"> Hair
+      </label>
+      <label>
+        <input type="checkbox" name="trait" value="eyes"> Eyes
+      </label>
+      <label>
+        <input type="checkbox" name="trait" value="nose"> Nose
+      </label>
+      <label>
+        <input type="checkbox" name="trait" value="mouth"> Mouth
+      </label>
+      <label>
+        <input type="checkbox" name="trait" value="face"> Face
+      </label>
+      <label>
+        <input type="checkbox" name="trait" value="body"> Body
+      </label>
+      <label>
+        <input type="checkbox" name="trait" value="arms"> Arms
+      </label>
+      <label>
+        <input type="checkbox" name="trait" value="everything"> Everything
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <input id="submit" type="submit" value="Submit">
+    </fieldset>
+  </form>
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: "Cursive", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #4a4a4a;
+    }
+
+    /* Center the form */
+    #survey-form {
+      background-color: #ffffffcc;
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      border: 2px solid #ffc3a0;
+    }
+
+    /* Heading */
+    h1#title {
+      font-size: 2.5em;
+      color: #d95757;
+      text-shadow: 2px 2px #ffc3a0;
+      margin-bottom: 10px;
+    }
+
+    /* Description */
+    #description {
+      font-size: 1.2em;
+      color: #5d5c61;
+      margin-bottom: 20px;
+    }
+
+    /* Fieldsets */
+    fieldset {
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    /* Labels and Inputs */
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1em;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea,
+    select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 2px solid #fad0c4;
+      border-radius: 8px;
+      font-size: 1em;
+      margin-top: 5px;
+      outline: none;
+      background-color: #fff5f5;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #ff9a9e;
+      background-color: #ffe4e4;
+    }
+
+    /* Radio Buttons and Checkboxes */
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    fieldset p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #4a4a4a;
+    }
+
+    /* Submit Button */
+    #submit {
+      background-color: #ff6f61;
+      color: white;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #submit:hover {
+      background-color: #d95757;
+    }
+
+    /* Additional Styling */
+    ::placeholder {
+      color: #aaa;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    option {
+      color: #4a4a4a;
+    }
+
+    /* Decorative Heart */
+    body:before {
+      content: "❤️";
+      font-size: 5em;
+      color: rgba(255, 105, 97, 0.1);
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</body>
+</html>
